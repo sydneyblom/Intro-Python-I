@@ -35,10 +35,14 @@ print("Distance is: {:.2f}".format(dist(a, b)))
 # Write a function `print_tuple` that prints all the values in a tuple
 
 # YOUR CODE HERE
-
+def print_tuple(tup):
+    for value in tup:
+        print(value)
 t = (1, 2, 5, 7, 99)
 print_tuple(t)  # Prints 1 2 5 7 99, one per line
 
 # Declare a tuple of 1 element then print it
-u = (1)  # What needs to be added to make this work?
+#The parenthesis don't automatically make them tuples. You have to add a comma after the string to indicate to python that it should be a tuple.
+#A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accommodate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed by following a value with a comma (it is not sufficient to enclose a single value in parentheses). Ugly, but effective.
+u = (1,)  # What needs to be added to make this work?
 print_tuple(u)
